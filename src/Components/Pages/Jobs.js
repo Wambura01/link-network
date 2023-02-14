@@ -85,7 +85,7 @@ function Jobs() {
                 >
                   {job.type}
                 </Typography>
-              </Box>
+              </Box> 
             </Box>
             <Box sx={{ ml: "2rem" }}>
               <Box sx={{ display: "flex", mb: ".8rem", alignItems: "center" }}>
