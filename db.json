@@ -5,7 +5,24 @@
       "company_name": "Safaricom",
       "type": "Contract",
       "role": "Front-End Engineer",
-      "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "description": [
+        "Work closely with the product, design and engineering teams",
+        "Research new technologies and propose solutions to user needs",
+        "Identify UI problems and bugs and devise elegant solutions",
+        "Participate in code reviews and ship code on a daily basis",
+        "Develop fully functional web applications that align with business objectives",
+        "Mentor and onboard junior members of the team",
+        "Work directly with the client to define and clarify requirements",
+        "Accept payments, ensuring all prices and quantities are accurate",
+        "Follow the best practices in developments and improve them",
+        "Create high resolution mockups to test interfaces with users",
+        "Complete all required paperwork and documentation according to guidelines and deadlines as assigned",
+        "Exemplify both technical expertise and empathy",
+        "Overhaul user interfaces to optimize for speed and ease of use",
+        "Expedite all cashiers and service desk transactions",
+        "Ensure customer service is provided in a timely fashion",
+        "Assist in the test strategy and execution of master test plan"
+      ],
       "count": 47
     },
     {
@@ -13,7 +30,20 @@
       "company_name": "Microsoft",
       "type": "Contract",
       "role": "Quality Assurance Engineer",
-      "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+      "description": [
+        "Review requirements, specifications and technical design documents to provide timely and meaningful feedback",
+        "Create detailed, comprehensive and well-structured test plans and test cases",
+        "Estimate, prioritize, plan and coordinate testing activities",
+        "Design, develop and execute automation scripts using open source tools",
+        "Identify, record, document thoroughly and track bugs",
+        "Perform thorough regression testing when bugs are resolved",
+        "Develop and apply testing processes for new and existing products to meet client needs",
+        "Liaise with internal teams (e.g. developers and product managers) to identify system requirements",
+        "Monitor debugging process results",
+        "Investigate the causes of non-conforming software and train users to implement solutions",
+        "Track quality assurance metrics, like defect densities and open defect counts",
+        "Stay up-to-date with new testing tools and test strategies"
+      ],
       "count": 46
     },
     {
@@ -21,7 +51,18 @@
       "company_name": "Kwara",
       "type": "Contract",
       "role": "Fullstack Engineer",
-      "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
+      "description": [
+        "Meeting with the software development team to define the scope and scale of software projects.",
+        "Designing software system architecture.",
+        "Completing data structures and design patterns.",
+        "Designing and implementing scalable web services, applications, and APIs.",
+        "Developing and maintaining internal software tools.",
+        "Writing low-level and high-level code.",
+        "Troubleshooting and bug fixing.",
+        "Identifying bottlenecks and improving software efficiency.",
+        "Collaborating with the design team on developing micro-services.",
+        "Writing technical documents."
+      ],
       "count": 93
     },
     {
@@ -29,7 +70,20 @@
       "company_name": "Safaricom",
       "type": "Contract",
       "role": "Quality Assurance Engineer",
-      "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+      "description": [
+        "Review requirements, specifications and technical design documents to provide timely and meaningful feedback",
+        "Create detailed, comprehensive and well-structured test plans and test cases",
+        "Estimate, prioritize, plan and coordinate testing activities",
+        "Design, develop and execute automation scripts using open source tools",
+        "Identify, record, document thoroughly and track bugs",
+        "Perform thorough regression testing when bugs are resolved",
+        "Develop and apply testing processes for new and existing products to meet client needs",
+        "Liaise with internal teams (e.g. developers and product managers) to identify system requirements",
+        "Monitor debugging process results",
+        "Investigate the causes of non-conforming software and train users to implement solutions",
+        "Track quality assurance metrics, like defect densities and open defect counts",
+        "Stay up-to-date with new testing tools and test strategies"
+      ],
       "count": 7
     },
     {
@@ -37,7 +91,16 @@
       "company_name": "Kwara",
       "type": "Internship",
       "role": "Back-End Engineer",
-      "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+      "description": [
+        "Generate recyclable code libraries",
+        "Implement ongoing security systems",
+        " Attend regular meeting with the front end team to expose weaknesses and problems",
+        "Routinely inspect server code for speed optimization",
+        "Conceptualize and implement solutions for data storage",
+        "Configure usability of all front side applications",
+        "Maintain a stable server with zero downtime",
+        "Keep a backup library before any large changes to server"
+      ],
       "count": 32
     },
     {
@@ -45,7 +108,18 @@
       "company_name": "Twiga Foods",
       "type": "Full Time",
       "role": "Product manager",
-      "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+      "description": [
+        "Gain a deep understanding of customer experience, identify and fill product gaps and generate new ideas that grow market share, improve customer experience and drive growth",
+        "Create buy-in for the product vision both internally and with key external partners",
+        " Develop product pricing and positioning strategies",
+        "Translate product strategy into detailed requirements and prototypes",
+        "Scope and prioritize activities based on business and customer impact",
+        "Work closely with engineering teams to deliver with quick time-to-market and optimal resources",
+        "Drive product launches including working with public relations team, executives, and other product management team members",
+        "Evaluate promotional plans to ensure that they are consistent with product line strategy and that the message is effectively conveyed",
+        " Act as a product evangelist to build awareness and understanding",
+        "Represent the company by visiting customers to solicit feedback on company products and services"
+      ],
       "count": 4
     },
     {
@@ -53,7 +127,24 @@
       "company_name": "Safaricom",
       "type": "Full Time",
       "role": "Front-End Engineer",
-      "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+      "description": [
+        "Work closely with the product, design and engineering teams",
+        "Research new technologies and propose solutions to user needs",
+        "Identify UI problems and bugs and devise elegant solutions",
+        "Participate in code reviews and ship code on a daily basis",
+        "Develop fully functional web applications that align with business objectives",
+        "Mentor and onboard junior members of the team",
+        "Work directly with the client to define and clarify requirements",
+        "Accept payments, ensuring all prices and quantities are accurate",
+        "Follow the best practices in developments and improve them",
+        "Create high resolution mockups to test interfaces with users",
+        "Complete all required paperwork and documentation according to guidelines and deadlines as assigned",
+        "Exemplify both technical expertise and empathy",
+        "Overhaul user interfaces to optimize for speed and ease of use",
+        "Expedite all cashiers and service desk transactions",
+        "Ensure customer service is provided in a timely fashion",
+        "Assist in the test strategy and execution of master test plan"
+      ],
       "count": 15
     },
     {
@@ -61,7 +152,20 @@
       "company_name": "Kwara",
       "type": "Full Time",
       "role": "Quality Assurance Engineer",
-      "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+      "description": [
+        "Review requirements, specifications and technical design documents to provide timely and meaningful feedback",
+        "Create detailed, comprehensive and well-structured test plans and test cases",
+        "Estimate, prioritize, plan and coordinate testing activities",
+        "Design, develop and execute automation scripts using open source tools",
+        "Identify, record, document thoroughly and track bugs",
+        "Perform thorough regression testing when bugs are resolved",
+        "Develop and apply testing processes for new and existing products to meet client needs",
+        "Liaise with internal teams (e.g. developers and product managers) to identify system requirements",
+        "Monitor debugging process results",
+        "Investigate the causes of non-conforming software and train users to implement solutions",
+        "Track quality assurance metrics, like defect densities and open defect counts",
+        "Stay up-to-date with new testing tools and test strategies"
+      ],
       "count": 8
     },
     {
@@ -69,7 +173,16 @@
       "company_name": "Microsoft",
       "type": "Full Time",
       "role": "Back-End Engineer",
-      "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "description": [
+        "Generate recyclable code libraries",
+        "Implement ongoing security systems",
+        " Attend regular meeting with the front end team to expose weaknesses and problems",
+        "Routinely inspect server code for speed optimization",
+        "Conceptualize and implement solutions for data storage",
+        "Configure usability of all front side applications",
+        "Maintain a stable server with zero downtime",
+        "Keep a backup library before any large changes to server"
+      ],
       "count": 43
     },
     {
@@ -77,7 +190,18 @@
       "company_name": "Twiga Foods",
       "type": "Contract",
       "role": "Product manager",
-      "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+      "description": [
+        "Gain a deep understanding of customer experience, identify and fill product gaps and generate new ideas that grow market share, improve customer experience and drive growth",
+        "Create buy-in for the product vision both internally and with key external partners",
+        " Develop product pricing and positioning strategies",
+        "Translate product strategy into detailed requirements and prototypes",
+        "Scope and prioritize activities based on business and customer impact",
+        "Work closely with engineering teams to deliver with quick time-to-market and optimal resources",
+        "Drive product launches including working with public relations team, executives, and other product management team members",
+        "Evaluate promotional plans to ensure that they are consistent with product line strategy and that the message is effectively conveyed",
+        " Act as a product evangelist to build awareness and understanding",
+        "Represent the company by visiting customers to solicit feedback on company products and services"
+      ],
       "count": 79
     },
     {
@@ -85,7 +209,16 @@
       "company_name": "Sendy",
       "type": "Internship",
       "role": "Back-End Engineer",
-      "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+      "description": [
+        "Generate recyclable code libraries",
+        "Implement ongoing security systems",
+        " Attend regular meeting with the front end team to expose weaknesses and problems",
+        "Routinely inspect server code for speed optimization",
+        "Conceptualize and implement solutions for data storage",
+        "Configure usability of all front side applications",
+        "Maintain a stable server with zero downtime",
+        "Keep a backup library before any large changes to server"
+      ],
       "count": 51
     },
     {
@@ -93,7 +226,20 @@
       "company_name": "Kwara",
       "type": "Contract",
       "role": "Quality Assurance Engineer",
-      "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
+      "description": [
+        "Review requirements, specifications and technical design documents to provide timely and meaningful feedback",
+        "Create detailed, comprehensive and well-structured test plans and test cases",
+        "Estimate, prioritize, plan and coordinate testing activities",
+        "Design, develop and execute automation scripts using open source tools",
+        "Identify, record, document thoroughly and track bugs",
+        "Perform thorough regression testing when bugs are resolved",
+        "Develop and apply testing processes for new and existing products to meet client needs",
+        "Liaise with internal teams (e.g. developers and product managers) to identify system requirements",
+        "Monitor debugging process results",
+        "Investigate the causes of non-conforming software and train users to implement solutions",
+        "Track quality assurance metrics, like defect densities and open defect counts",
+        "Stay up-to-date with new testing tools and test strategies"
+      ],
       "count": 82
     },
     {
@@ -101,7 +247,18 @@
       "company_name": "Kwara",
       "type": "Internship",
       "role": "Product manager",
-      "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
+      "description": [
+        "Gain a deep understanding of customer experience, identify and fill product gaps and generate new ideas that grow market share, improve customer experience and drive growth",
+        "Create buy-in for the product vision both internally and with key external partners",
+        " Develop product pricing and positioning strategies",
+        "Translate product strategy into detailed requirements and prototypes",
+        "Scope and prioritize activities based on business and customer impact",
+        "Work closely with engineering teams to deliver with quick time-to-market and optimal resources",
+        "Drive product launches including working with public relations team, executives, and other product management team members",
+        "Evaluate promotional plans to ensure that they are consistent with product line strategy and that the message is effectively conveyed",
+        " Act as a product evangelist to build awareness and understanding",
+        "Represent the company by visiting customers to solicit feedback on company products and services"
+      ],
       "count": 14
     },
     {
@@ -109,7 +266,20 @@
       "company_name": "Microsoft",
       "type": "Internship",
       "role": "Quality Assurance Engineer",
-      "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+      "description": [
+        "Review requirements, specifications and technical design documents to provide timely and meaningful feedback",
+        "Create detailed, comprehensive and well-structured test plans and test cases",
+        "Estimate, prioritize, plan and coordinate testing activities",
+        "Design, develop and execute automation scripts using open source tools",
+        "Identify, record, document thoroughly and track bugs",
+        "Perform thorough regression testing when bugs are resolved",
+        "Develop and apply testing processes for new and existing products to meet client needs",
+        "Liaise with internal teams (e.g. developers and product managers) to identify system requirements",
+        "Monitor debugging process results",
+        "Investigate the causes of non-conforming software and train users to implement solutions",
+        "Track quality assurance metrics, like defect densities and open defect counts",
+        "Stay up-to-date with new testing tools and test strategies"
+      ],
       "count": 6
     },
     {
@@ -117,7 +287,20 @@
       "company_name": "Sendy",
       "type": "Contract",
       "role": "Quality Assurance Engineer",
-      "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
+      "description": [
+        "Review requirements, specifications and technical design documents to provide timely and meaningful feedback",
+        "Create detailed, comprehensive and well-structured test plans and test cases",
+        "Estimate, prioritize, plan and coordinate testing activities",
+        "Design, develop and execute automation scripts using open source tools",
+        "Identify, record, document thoroughly and track bugs",
+        "Perform thorough regression testing when bugs are resolved",
+        "Develop and apply testing processes for new and existing products to meet client needs",
+        "Liaise with internal teams (e.g. developers and product managers) to identify system requirements",
+        "Monitor debugging process results",
+        "Investigate the causes of non-conforming software and train users to implement solutions",
+        "Track quality assurance metrics, like defect densities and open defect counts",
+        "Stay up-to-date with new testing tools and test strategies"
+      ],
       "count": 24
     },
     {
@@ -125,7 +308,18 @@
       "company_name": "Microsoft",
       "type": "Contract",
       "role": "Fullstack Engineer",
-      "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+      "description": [
+        "Meeting with the software development team to define the scope and scale of software projects.",
+        "Designing software system architecture.",
+        "Completing data structures and design patterns.",
+        "Designing and implementing scalable web services, applications, and APIs.",
+        "Developing and maintaining internal software tools.",
+        "Writing low-level and high-level code.",
+        "Troubleshooting and bug fixing.",
+        "Identifying bottlenecks and improving software efficiency.",
+        "Collaborating with the design team on developing micro-services.",
+        "Writing technical documents."
+      ],
       "count": 38
     },
     {
@@ -133,7 +327,24 @@
       "company_name": "Twiga Foods",
       "type": "Contract",
       "role": "Front-End Engineer",
-      "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+      "description": [
+        "Work closely with the product, design and engineering teams",
+        "Research new technologies and propose solutions to user needs",
+        "Identify UI problems and bugs and devise elegant solutions",
+        "Participate in code reviews and ship code on a daily basis",
+        "Develop fully functional web applications that align with business objectives",
+        "Mentor and onboard junior members of the team",
+        "Work directly with the client to define and clarify requirements",
+        "Accept payments, ensuring all prices and quantities are accurate",
+        "Follow the best practices in developments and improve them",
+        "Create high resolution mockups to test interfaces with users",
+        "Complete all required paperwork and documentation according to guidelines and deadlines as assigned",
+        "Exemplify both technical expertise and empathy",
+        "Overhaul user interfaces to optimize for speed and ease of use",
+        "Expedite all cashiers and service desk transactions",
+        "Ensure customer service is provided in a timely fashion",
+        "Assist in the test strategy and execution of master test plan"
+      ],
       "count": 5
     },
     {
@@ -141,7 +352,18 @@
       "company_name": "Safaricom",
       "type": "Contract",
       "role": "Fullstack Engineer",
-      "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+      "description": [
+        "Meeting with the software development team to define the scope and scale of software projects.",
+        "Designing software system architecture.",
+        "Completing data structures and design patterns.",
+        "Designing and implementing scalable web services, applications, and APIs.",
+        "Developing and maintaining internal software tools.",
+        "Writing low-level and high-level code.",
+        "Troubleshooting and bug fixing.",
+        "Identifying bottlenecks and improving software efficiency.",
+        "Collaborating with the design team on developing micro-services.",
+        "Writing technical documents."
+      ],
       "count": 65
     },
     {
@@ -149,7 +371,20 @@
       "company_name": "Twiga Foods",
       "type": "Internship",
       "role": "Quality Assurance Engineer",
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+      "description": [
+        "Review requirements, specifications and technical design documents to provide timely and meaningful feedback",
+        "Create detailed, comprehensive and well-structured test plans and test cases",
+        "Estimate, prioritize, plan and coordinate testing activities",
+        "Design, develop and execute automation scripts using open source tools",
+        "Identify, record, document thoroughly and track bugs",
+        "Perform thorough regression testing when bugs are resolved",
+        "Develop and apply testing processes for new and existing products to meet client needs",
+        "Liaise with internal teams (e.g. developers and product managers) to identify system requirements",
+        "Monitor debugging process results",
+        "Investigate the causes of non-conforming software and train users to implement solutions",
+        "Track quality assurance metrics, like defect densities and open defect counts",
+        "Stay up-to-date with new testing tools and test strategies"
+      ],
       "count": 71
     },
     {
@@ -157,7 +392,18 @@
       "company_name": "Twiga Foods",
       "type": "Contract",
       "role": "Fullstack Engineer",
-      "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+      "description": [
+        "Meeting with the software development team to define the scope and scale of software projects.",
+        "Designing software system architecture.",
+        "Completing data structures and design patterns.",
+        "Designing and implementing scalable web services, applications, and APIs.",
+        "Developing and maintaining internal software tools.",
+        "Writing low-level and high-level code.",
+        "Troubleshooting and bug fixing.",
+        "Identifying bottlenecks and improving software efficiency.",
+        "Collaborating with the design team on developing micro-services.",
+        "Writing technical documents."
+      ],
       "count": 27
     },
     {
@@ -165,7 +411,16 @@
       "company_name": "Microsoft",
       "type": "Full Time",
       "role": "Back-End Engineer",
-      "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+      "description": [
+        "Generate recyclable code libraries",
+        "Implement ongoing security systems",
+        " Attend regular meeting with the front end team to expose weaknesses and problems",
+        "Routinely inspect server code for speed optimization",
+        "Conceptualize and implement solutions for data storage",
+        "Configure usability of all front side applications",
+        "Maintain a stable server with zero downtime",
+        "Keep a backup library before any large changes to server"
+      ],
       "count": 79
     },
     {
@@ -173,7 +428,18 @@
       "company_name": "Sendy",
       "type": "Contract",
       "role": "Product manager",
-      "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+      "description": [
+        "Gain a deep understanding of customer experience, identify and fill product gaps and generate new ideas that grow market share, improve customer experience and drive growth",
+        "Create buy-in for the product vision both internally and with key external partners",
+        " Develop product pricing and positioning strategies",
+        "Translate product strategy into detailed requirements and prototypes",
+        "Scope and prioritize activities based on business and customer impact",
+        "Work closely with engineering teams to deliver with quick time-to-market and optimal resources",
+        "Drive product launches including working with public relations team, executives, and other product management team members",
+        "Evaluate promotional plans to ensure that they are consistent with product line strategy and that the message is effectively conveyed",
+        " Act as a product evangelist to build awareness and understanding",
+        "Represent the company by visiting customers to solicit feedback on company products and services"
+      ],
       "count": 4
     },
     {
@@ -181,7 +447,18 @@
       "company_name": "Microsoft",
       "type": "Full Time",
       "role": "Product manager",
-      "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+      "description": [
+        "Gain a deep understanding of customer experience, identify and fill product gaps and generate new ideas that grow market share, improve customer experience and drive growth",
+        "Create buy-in for the product vision both internally and with key external partners",
+        " Develop product pricing and positioning strategies",
+        "Translate product strategy into detailed requirements and prototypes",
+        "Scope and prioritize activities based on business and customer impact",
+        "Work closely with engineering teams to deliver with quick time-to-market and optimal resources",
+        "Drive product launches including working with public relations team, executives, and other product management team members",
+        "Evaluate promotional plans to ensure that they are consistent with product line strategy and that the message is effectively conveyed",
+        " Act as a product evangelist to build awareness and understanding",
+        "Represent the company by visiting customers to solicit feedback on company products and services"
+      ],
       "count": 34
     },
     {
@@ -189,7 +466,16 @@
       "company_name": "Kwara",
       "type": "Contract",
       "role": "Back-End Engineer",
-      "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+      "description": [
+        "Generate recyclable code libraries",
+        "Implement ongoing security systems",
+        " Attend regular meeting with the front end team to expose weaknesses and problems",
+        "Routinely inspect server code for speed optimization",
+        "Conceptualize and implement solutions for data storage",
+        "Configure usability of all front side applications",
+        "Maintain a stable server with zero downtime",
+        "Keep a backup library before any large changes to server"
+      ],
       "count": 95
     },
     {
@@ -197,7 +483,18 @@
       "company_name": "Safaricom",
       "type": "Contract",
       "role": "Product manager",
-      "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+      "description": [
+        "Gain a deep understanding of customer experience, identify and fill product gaps and generate new ideas that grow market share, improve customer experience and drive growth",
+        "Create buy-in for the product vision both internally and with key external partners",
+        " Develop product pricing and positioning strategies",
+        "Translate product strategy into detailed requirements and prototypes",
+        "Scope and prioritize activities based on business and customer impact",
+        "Work closely with engineering teams to deliver with quick time-to-market and optimal resources",
+        "Drive product launches including working with public relations team, executives, and other product management team members",
+        "Evaluate promotional plans to ensure that they are consistent with product line strategy and that the message is effectively conveyed",
+        " Act as a product evangelist to build awareness and understanding",
+        "Represent the company by visiting customers to solicit feedback on company products and services"
+      ],
       "count": 55
     }
   ]

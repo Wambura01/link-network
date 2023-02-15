@@ -11,6 +11,7 @@ import Blank from "../../Assets/blank.png";
 
 import { Box, Typography, Tooltip } from "@mui/material";
 import PeopleIcon from "@mui/icons-material/People";
+import RemoveIcon from "@mui/icons-material/Remove";
 
 import Apply from "../Jobs/apply";
 
@@ -37,7 +38,7 @@ function Jobs() {
   useEffect(() => {
     // fetch jobs on render
     const getJobs = () => {
-      const url = `http://localhost:3002/jobs`;
+      const url = `http://localhost:3001/jobs`;
       fetch(url)
         .then((response) => response.json())
         .then((data) => setJobs(data));
@@ -60,6 +61,7 @@ function Jobs() {
       >
         {jobs.map((job) => (
           <Box
+            key={job.id}
             sx={{
               width: "47%",
               padding: "2rem 0",
@@ -85,7 +87,7 @@ function Jobs() {
                 >
                   {job.type}
                 </Typography>
-              </Box> 
+              </Box>
             </Box>
             <Box sx={{ ml: "2rem" }}>
               <Box sx={{ display: "flex", mb: ".8rem", alignItems: "center" }}>
@@ -97,7 +99,12 @@ function Jobs() {
                 </Tooltip>
                 <Typography sx={{ fontSize: "0.8rem" }}>{job.count}</Typography>
               </Box>
-              <Typography>{job.description}</Typography>
+              {job.description?.map((desc) => (
+                <Box key={desc} sx={{ display: "flex", alignItems: "center" }}>
+                  <RemoveIcon />
+                  <Typography>{desc}</Typography>
+                </Box>
+              ))}
             </Box>
             <Box sx={{ display: "flex", justifyContent: "center", mt: "2rem" }}>
               <Apply />

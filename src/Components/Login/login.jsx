@@ -12,7 +12,6 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
-import GoogleIcon from "@mui/icons-material/Google";
 
 import logo from "../../Assets/logo.png";
 
@@ -27,16 +26,14 @@ import {
   InputContainer,
   InputLabels,
   ForgotPassword,
-  SignInOptions,
 } from "./loginStyles";
+import { logInWithEmailAndPassword } from "../../Firebase/operations";
+import { auth } from "../../Firebase/firebaseConfig";
 
 function Login() {
   const [isLogged, setIsLogged] = useState(false); // logged in state
   const [open, setOpen] = useState(false); // open and close alert
   let navigate = useNavigate();
-
-  //   const provider = new GoogleAuthProvider();
-  //   const auth = getAuth();
 
   // customizable alert
   const Alert = forwardRef(function Alert(props, ref) {
@@ -52,28 +49,6 @@ function Login() {
     setOpen(false);
   };
 
-  // login with google popup
-  //   const loginWithPopUp = async () => {
-  //     signInWithPopup(auth, provider)
-  //       .then((result) => {
-  //         const user = result.user.providerData[0];
-  //         console.log("user: ", user);
-  //         localStorage.setItem("user", JSON.stringify(user));
-  //         navigate("/", { replace: true });
-  //       })
-  //       .catch((error) => {
-  //         // Handle Errors here.
-  //         const errorCode = error.code;
-  //         const errorMessage = error.message;
-  //         console.log(
-  //           "Error Code: ",
-  //           errorCode,
-  //           " Error Message: ",
-  //           errorMessage
-  //         );
-  //       });
-  //   };
-
   // validating form inputs
   const LoginSchema = Yup.object().shape({
     email: Yup.string()
@@ -86,22 +61,23 @@ function Login() {
     initialValues: { email: "", password: "" },
     validationSchema: LoginSchema,
     onSubmit: async (values) => {
-      //   const response = await logInWithEmailAndPassword(
-      //     values.email,
-      //     values.password
-      //   );
-      //   if (response) {
-      //     console.log("user", response);
-      //     localStorage.setItem("user", JSON.stringify(response));
-      //     setIsLogged(true);
-      //     setTimeout(() => {
-      //       navigate("/", { replace: true });
-      //     }, 1000);
-      //   } else {
-      //     console.log("Wrong Credentials!");
-      //   }
+      const response = await logInWithEmailAndPassword(
+        auth,
+        values.email,
+        values.password
+      );
+      if (response) {
+        console.log("user", response);
+        localStorage.setItem("user", JSON.stringify(response));
+        setIsLogged(true);
+        setTimeout(() => {
+          navigate("/", { replace: true });
+        }, 1000);
+      } else {
+        console.log("Wrong Credentials!");
+      }
 
-      //   handleClick();
+      handleClick();
 
       console.log("Credentials: ", values);
     },
@@ -175,57 +151,26 @@ function Login() {
               >
                 <ForgotPassword>Dont have an account? Register</ForgotPassword>
               </Link>
-              <Link style={{ textDecoration: "none" }} to="/">
-                <Button
-                  type="submit"
-                  variant="contained"
-                  sx={{
-                    padding: "1rem 0",
-                    backgroundColor: "black",
-                    "&:hover": {
-                      backgroundColor: "white",
-                      color: "black",
-                      border: "2px solid black",
-                    },
-                  }}
-                  fullWidth
-                >
-                  <Typography sx={{ fontWeight: "bold", fontSize: ".9rem" }}>
-                    Login
-                  </Typography>
-                </Button>
-              </Link>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{
+                  padding: "1rem 0",
+                  backgroundColor: "black",
+                  "&:hover": {
+                    backgroundColor: "white",
+                    color: "black",
+                    border: "2px solid black",
+                  },
+                }}
+                fullWidth
+              >
+                <Typography sx={{ fontWeight: "bold", fontSize: ".9rem" }}>
+                  Login
+                </Typography>
+              </Button>
             </Form>
           </FormikProvider>
-          {/* <div
-            style={{
-              marginTop: "2rem",
-              width: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-            className="or"
-          >
-            <p
-              style={{
-                fontSize: "1.5rem",
-                fontWeight: "normal",
-                marginTop: "0",
-              }}
-            >
-              Or
-            </p>
-          </div> */}
-          {/* <SignInOptions>
-            <GoogleIcon
-              //   onClick={loginWithPopUp}
-              sx={{ fontSize: "4rem", cursor: "pointer" }}
-            />
-            <Typography sx={{ fontSize: ".9rem" }}>
-              Sign In with Google
-            </Typography>
-          </SignInOptions> */}
         </RightContent>
       </RightDiv>
     </LoginPage>
