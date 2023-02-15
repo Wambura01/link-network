@@ -3,8 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useFormik, Form, FormikProvider } from "formik";
 import * as Yup from "yup";
 
-// import { registerWithEmailAndPassword } from "../../firebase/firebase";
-
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -26,6 +24,8 @@ import {
   InputLabels,
   ForgotPassword,
 } from "./loginStyles";
+import { registerWithEmailAndPassword } from "../../Firebase/operations";
+import { auth } from "../../Firebase/firebaseConfig";
 
 function Register() {
   const [isRegistered, setIsRegistered] = useState(false); // logged in state
@@ -61,22 +61,23 @@ function Register() {
     initialValues: { email: "", password: "", confirmPassword: "" },
     validationSchema: RegisterSchema,
     onSubmit: async (values) => {
-      //   const response = await registerWithEmailAndPassword(
-      //     values.email,
-      //     values.password
-      //   );
-      //   if (response) {
-      //     console.log("user", response);
-      //     localStorage.setItem("user", JSON.stringify(response));
-      //     setIsRegistered(true);
-      //     setTimeout(() => {
-      //       navigate("/enroll", { replace: true });
-      //     }, 1000);
-      //   } else {
-      //     console.log("Cannot register!");
-      //   }
+      const response = await registerWithEmailAndPassword(
+        auth,
+        values.email,
+        values.password
+      );
 
-      //   handleClick();
+      if (response) {
+        localStorage.setItem("user", JSON.stringify(response));
+        setIsRegistered(true);
+        setTimeout(() => {
+          navigate("/", { replace: true });
+        }, 1000);
+      } else {
+        console.log("Cannot register!");
+      }
+
+      handleClick();
 
       console.log("Values: ", values);
     },
@@ -167,26 +168,24 @@ function Register() {
               >
                 <ForgotPassword>Already have an account? Login</ForgotPassword>
               </Link>
-              <Link style={{ textDecoration: "none" }} to="/">
-                <Button
-                  type="submit"
-                  variant="contained"
-                  sx={{
-                    padding: "1rem 0",
-                    backgroundColor: "black",
-                    "&:hover": {
-                      backgroundColor: "white",
-                      color: "black",
-                      border: "2px solid black",
-                    },
-                  }}
-                  fullWidth
-                >
-                  <Typography sx={{ fontWeight: "bold", fontSize: ".9rem" }}>
-                    Register
-                  </Typography>
-                </Button>
-              </Link>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{
+                  padding: "1rem 0",
+                  backgroundColor: "black",
+                  "&:hover": {
+                    backgroundColor: "white",
+                    color: "black",
+                    border: "2px solid black",
+                  },
+                }}
+                fullWidth
+              >
+                <Typography sx={{ fontWeight: "bold", fontSize: ".9rem" }}>
+                  Register
+                </Typography>
+              </Button>
             </Form>
           </FormikProvider>
         </RightContent>
