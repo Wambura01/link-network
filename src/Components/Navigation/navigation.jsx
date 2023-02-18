@@ -63,11 +63,11 @@ function Navigation() {
           marginRight: "2rem",
         }}
       >
-        <Link style={{ color: "black" }} to="/login">
+        <Link style={{ color: "black" }} to="/choice">
           <Typography>Login</Typography>
         </Link>
         <span>|</span>
-        <Link style={{ color: "black" }} to="/register">
+        <Link style={{ color: "black" }} to="/choice">
           <Typography>Register</Typography>
         </Link>
       </Box>
