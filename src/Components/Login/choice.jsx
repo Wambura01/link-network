@@ -1,129 +1,52 @@
-import React, { useState, forwardRef } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import { useFormik, Form, FormikProvider } from "formik";
+import React from "react";
+import { useFormik, Form, FormikProvider, Field } from "formik";
 import * as Yup from "yup";
-
-// import { logInWithEmailAndPassword } from "../../firebase/firebase";
-// import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import Snackbar from "@mui/material/Snackbar";
-import MuiAlert from "@mui/material/Alert";
-import GoogleIcon from "@mui/icons-material/Google";
 
 import logo from "../../Assets/logo.png";
 
 //styles
-import {
-  LeftDiv,
-  LoginPage,
-  LogoStyles,
-  RightDiv,
-  RightContent,
-  Heading,
-  InputContainer,
-  InputLabels,
-  ForgotPassword,
-  SignInOptions,
-} from "./loginStyles";
+import { LoginPage, LogoStyles, RightContent, Heading } from "./loginStyles";
 
-function Login() {
-  const [isLogged, setIsLogged] = useState(false); // logged in state
-  const [open, setOpen] = useState(false); // open and close alert
-  let navigate = useNavigate();
-
-  //   const provider = new GoogleAuthProvider();
-  //   const auth = getAuth();
-
-  // customizable alert
-  const Alert = forwardRef(function Alert(props, ref) {
-    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-  });
-
-  const handleClick = () => {
-    setOpen(true);
-  };
-
-  // handle closing of alert
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  // login with google popup
-  //   const loginWithPopUp = async () => {
-  //     signInWithPopup(auth, provider)
-  //       .then((result) => {
-  //         const user = result.user.providerData[0];
-  //         console.log("user: ", user);
-  //         localStorage.setItem("user", JSON.stringify(user));
-  //         navigate("/", { replace: true });
-  //       })
-  //       .catch((error) => {
-  //         // Handle Errors here.
-  //         const errorCode = error.code;
-  //         const errorMessage = error.message;
-  //         console.log(
-  //           "Error Code: ",
-  //           errorCode,
-  //           " Error Message: ",
-  //           errorMessage
-  //         );
-  //       });
-  //   };
+function Choice() {
+  const navigate = useNavigate();
 
   // validating form inputs
-  const LoginSchema = Yup.object().shape({
-    email: Yup.string()
-      .email("Email must be a valid email address")
-      .required("Email is required!"),
-    password: Yup.string().required("Password is required!"),
+  const ChoiceSchema = Yup.object().shape({
+    role: Yup.string().required("Role is required!"),
   });
 
   const formik = useFormik({
-    initialValues: { email: "", password: "" },
-    validationSchema: LoginSchema,
-    onSubmit: async (values) => {
-      //   const response = await logInWithEmailAndPassword(
-      //     values.email,
-      //     values.password
-      //   );
-      //   if (response) {
-      //     console.log("user", response);
-      //     localStorage.setItem("user", JSON.stringify(response));
-      //     setIsLogged(true);
-      //     setTimeout(() => {
-      //       navigate("/", { replace: true });
-      //     }, 1000);
-      //   } else {
-      //     console.log("Wrong Credentials!");
-      //   }
-
-      //   handleClick();
-
-      console.log("Credentials: ", values);
+    initialValues: { role: "" },
+    validationSchema: ChoiceSchema,
+    onSubmit: (values) => {
+      localStorage.setItem("role", values.role);
+      navigate("/login");
     },
   });
 
-  const { values, errors, touched, handleChange, handleBlur, handleSubmit } =
-    formik;
+  const { errors, handleSubmit } = formik;
 
   return (
     <LoginPage>
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert
-          onClose={handleClose}
-          severity={isLogged ? "success" : "error"}
-          sx={{ width: "100%" }}
-        >
-          {isLogged
-            ? "Logged in successfully!!!"
-            : "Incorrect Email or Password!!!"}
-        </Alert>
-      </Snackbar>
-      <LeftDiv className="left">
+      <Box
+        sx={{
+          width: "50%",
+          height: "100vh",
+          background: "black",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+
+          "@media(max-width: 768px)": {
+            display: "none",
+          },
+        }}
+      >
         <Box sx={{ width: "90%" }}>
           <Box>
             <LogoStyles className="logo-img">
@@ -131,76 +54,94 @@ function Login() {
             </LogoStyles>
           </Box>
         </Box>
-      </LeftDiv>
-      <RightDiv className="right">
+      </Box>
+      <Box
+        sx={{
+          width: "50%",
+          display: "flex",
+          height: "100vh",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "white",
+
+          "@media(max-width: 768px)": {
+            width: "100%",
+          },
+        }}
+      >
         <RightContent>
           <Heading>Kindly provide the details below to login:</Heading>
           <FormikProvider value={formik}>
             <Form autoComplete="off" noValidate onSubmit={handleSubmit}>
               <Box sx={{ mt: "1.2rem" }}>
-                <InputContainer>
-                  <InputLabels>Email Address</InputLabels>
-                  <TextField
-                    sx={{ mb: "4rem" }}
-                    placeholder="Enter your email"
-                    variant="filled"
-                    type="email"
-                    name="email"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                    error={touched.email && Boolean(errors.email)}
-                    helperText={touched.email && errors.email}
-                  />
-                </InputContainer>
-                <InputContainer>
-                  <InputLabels>Password</InputLabels>
-                  <TextField
-                    sx={{ mb: "1rem" }}
-                    placeholder="Enter your password"
-                    variant="filled"
-                    type="password"
-                    name="password"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.password}
-                    error={touched.password && Boolean(errors.password)}
-                    helperText={touched.password && errors.password}
-                  />
-                </InputContainer>
-              </Box>
-              <Link
-                style={{ textDecoration: "none", color: "black" }}
-                to="/register"
-              >
-                <ForgotPassword>Dont have an account? Register</ForgotPassword>
-              </Link>
-              <Link style={{ textDecoration: "none" }} to="/">
-                <Button
-                  type="submit"
-                  variant="contained"
+                <Typography sx={{ fontWeight: "bold" }}>Role</Typography>
+                <Box
                   sx={{
-                    padding: "1rem 0",
-                    backgroundColor: "black",
-                    "&:hover": {
-                      backgroundColor: "white",
-                      color: "black",
-                      border: "2px solid black",
-                    },
+                    display: "flex",
+                    margin: "1rem 4rem 0 0",
                   }}
-                  fullWidth
                 >
-                  <Typography sx={{ fontWeight: "bold", fontSize: ".9rem" }}>
-                    Login
-                  </Typography>
-                </Button>
-              </Link>
+                  <label
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "1.1rem",
+                      marginRight: "5rem",
+                    }}
+                  >
+                    <Field type="radio" name="role" value="student" />
+                    Student
+                  </label>
+                  <label
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "1.1rem",
+                      marginRight: "5rem",
+                    }}
+                  >
+                    <Field type="radio" name="role" value="editor" />
+                    Editor
+                  </label>
+                  <label
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    <Field type="radio" name="role" value="admin" />
+                    Admin
+                  </label>
+                </Box>
+              </Box>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{
+                  padding: "1rem 0",
+                  backgroundColor: "black",
+                  mt: "4rem",
+
+                  "&:hover": {
+                    backgroundColor: "white",
+                    color: "black",
+                    border: "2px solid black",
+                  },
+                }}
+                fullWidth
+              >
+                <Typography sx={{ fontWeight: "bold", fontSize: ".9rem" }}>
+                  Next
+                </Typography>
+              </Button>
             </Form>
           </FormikProvider>
         </RightContent>
-      </RightDiv>
+      </Box>
     </LoginPage>
   );
 }
 
-export default Login;
+export default Choice;
