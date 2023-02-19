@@ -25,7 +25,9 @@ function Choice() {
     validationSchema: ChoiceSchema,
     onSubmit: (values) => {
       localStorage.setItem("role", values.role);
-      navigate("/login");
+      values.role === "admin"
+        ? navigate("/register-admin")
+        : navigate("/login");
     },
   });
 

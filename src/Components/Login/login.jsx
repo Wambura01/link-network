@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useFormik, Form, FormikProvider } from "formik";
 import * as Yup from "yup";
@@ -27,11 +27,10 @@ import {
 import { logInWithEmailAndPassword } from "../../Firebase/operations";
 import { auth } from "../../Firebase/firebaseConfig";
 
-const role = localStorage.getItem("role");
-
 function Login() {
   const [isLogged, setIsLogged] = useState(false); // logged in state
   const [open, setOpen] = useState(false); // open and close alert
+  const [role, setRole] = useState("");
   let navigate = useNavigate();
 
   // customizable alert
@@ -47,6 +46,10 @@ function Login() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  useEffect(() => {
+    setRole(localStorage.getItem("role"));
+  }, [role]);
 
   // validating form inputs
   const LoginSchema = Yup.object().shape({
@@ -154,7 +157,7 @@ function Login() {
                     : "/register-admin"
                 }
               >
-                <ForgotPassword>Dont have an account? Register</ForgotPassword>
+                <ForgotPassword>Don't have an account? Register</ForgotPassword>
               </Link>
               <Button
                 type="submit"
