@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import logo from "../../Assets/logo_.png";
 
 import { Box, Typography } from "@mui/material";
+import AccountMenu from "../Account/account";
 
 function Navigation() {
+  const [user, setUser] = useState(null);
+
   const styles = {
     a: {
       textDecoration: "none",
@@ -21,6 +24,10 @@ function Navigation() {
       },
     },
   };
+
+  useEffect(() => {
+    setUser(JSON.parse(localStorage.getItem("user")));
+  }, []);
 
   return (
     <div
@@ -54,23 +61,27 @@ function Navigation() {
           <Typography sx={styles.typography}>Contact Us</Typography>
         </a>
       </Box>
-      <Box
-        sx={{
-          width: "8%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginRight: "2rem",
-        }}
-      >
-        <Link style={{ color: "black" }} to="/choice">
-          <Typography>Login</Typography>
-        </Link>
-        <span>|</span>
-        <Link style={{ color: "black" }} to="/choice">
-          <Typography>Register</Typography>
-        </Link>
-      </Box>
+      {user ? (
+        <AccountMenu />
+      ) : (
+        <Box
+          sx={{
+            width: "8%",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginRight: "2rem",
+          }}
+        >
+          <Link style={{ color: "black" }} to="/choice">
+            <Typography>Login</Typography>
+          </Link>
+          <span>|</span>
+          <Link style={{ color: "black" }} to="/choice">
+            <Typography>Register</Typography>
+          </Link>
+        </Box>
+      )}
     </div>
   );
 }

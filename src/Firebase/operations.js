@@ -1,7 +1,11 @@
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
+
+const provider = new GoogleAuthProvider();
 
 // authentication
 //register users
@@ -13,6 +17,7 @@ export const registerWithEmailAndPassword = async (auth, email, password) => {
       password
     ).then((userCredential) => {
       const user = userCredential.user;
+      localStorage.setItem("user", JSON.stringify(user.providerData));
 
       return user;
     });
@@ -30,6 +35,10 @@ export const logInWithEmailAndPassword = async (auth, email, password) => {
     const user = await signInWithEmailAndPassword(auth, email, password).then(
       (userCredentials) => {
         console.log("Logged in successfully!!");
+        localStorage.setItem(
+          "user",
+          JSON.stringify(userCredentials.user.providerData)
+        );
         return userCredentials;
       }
     );
@@ -38,5 +47,21 @@ export const logInWithEmailAndPassword = async (auth, email, password) => {
     return user;
   } catch (error) {
     console.log("Error while logging user: ", error.message);
+  }
+};
+
+// sign in with google pop up
+export const loginWithPopup = (auth) => {
+  let isRegistered = false;
+  try {
+    return signInWithPopup(auth, provider).then((response) => {
+      console.log("User: ", response.user);
+      localStorage.setItem("user", JSON.stringify(response.user.providerData));
+      isRegistered = true;
+      return isRegistered;
+    });
+  } catch (error) {
+    console.log("Error while sign in with popup: ", error);
+    return isRegistered;
   }
 };
