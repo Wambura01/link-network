@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik, Form, FormikProvider } from "formik";
 import * as Yup from "yup";
@@ -30,6 +30,7 @@ import { auth } from "../../Firebase/firebaseConfig";
 function Register() {
   const [isRegistered, setIsRegistered] = useState(false); // logged in state
   const [open, setOpen] = useState(false); // open and close alert
+  const [role, setRole] = useState(false);
   let navigate = useNavigate();
 
   // customizable alert
@@ -46,6 +47,10 @@ function Register() {
     setOpen(false);
   };
 
+  useEffect(() => {
+    setRole(localStorage.getItem("role"));
+  });
+
   // validating form inputs
   const RegisterSchema = Yup.object().shape({
     email: Yup.string()
@@ -55,17 +60,19 @@ function Register() {
     confirmPassword: Yup.string()
       .oneOf([Yup.ref("password"), null], "Passwords must match")
       .required("Confirm your Password is required!"),
+    displayName: Yup.string().required("Display name is required!"),
   });
 
   const formik = useFormik({
-    initialValues: { email: "", password: "", confirmPassword: "" },
+    initialValues: {
+      email: "",
+      password: "",
+      confirmPassword: "",
+      displayName: "",
+    },
     validationSchema: RegisterSchema,
     onSubmit: async (values) => {
-      const response = await registerWithEmailAndPassword(
-        auth,
-        values.email,
-        values.password
-      );
+      const response = await registerWithEmailAndPassword(auth, values, role);
 
       if (response) {
         localStorage.setItem("user", JSON.stringify(response));
@@ -113,9 +120,24 @@ function Register() {
             <Form autoComplete="off" noValidate onSubmit={handleSubmit}>
               <Box sx={{ mt: "1.2rem" }}>
                 <InputContainer>
+                  <InputLabels>Display Name</InputLabels>
+                  <TextField
+                    sx={{ mb: "1rem" }}
+                    placeholder="Enter your name"
+                    variant="filled"
+                    type="text"
+                    name="displayName"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.displayName}
+                    error={touched.displayName && Boolean(errors.displayName)}
+                    helperText={touched.displayName && errors.displayName}
+                  />
+                </InputContainer>
+                <InputContainer>
                   <InputLabels>Email Address</InputLabels>
                   <TextField
-                    sx={{ mb: "4rem" }}
+                    sx={{ mb: "1rem" }}
                     placeholder="Enter your email"
                     variant="filled"
                     type="email"
