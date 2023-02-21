@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik, Form, FormikProvider } from "formik";
 import * as Yup from "yup";
@@ -51,6 +51,7 @@ function RegisterEditor() {
   const [isRegistered, setIsRegistered] = useState(false); // logged in state
   const [open, setOpen] = useState(false); // open and close alert
   const [company, setCompany] = useState("");
+  const [role, setRole] = useState(false);
   let navigate = useNavigate();
 
   // customizable alert
@@ -71,8 +72,13 @@ function RegisterEditor() {
     setCompany(e.target.value);
   };
 
+  useEffect(() => {
+    setRole(localStorage.getItem("role"));
+  });
+
   // validating form inputs
   const RegisterSchema = Yup.object().shape({
+    displayName: Yup.string().required("Display name is required!"),
     email: Yup.string()
       .email("Email must be a valid email address")
       .required("Email is required!"),
@@ -89,15 +95,12 @@ function RegisterEditor() {
       password: "",
       company: company,
       confirmPassword: "",
+      displayName: "",
     },
     enableReinitialize: true,
     validationSchema: RegisterSchema,
     onSubmit: async (values) => {
-      const response = await registerWithEmailAndPassword(
-        auth,
-        values.email,
-        values.password
-      );
+      const response = await registerWithEmailAndPassword(auth, values, role);
 
       if (response) {
         localStorage.setItem("user", JSON.stringify(response));
@@ -144,6 +147,21 @@ function RegisterEditor() {
           <FormikProvider value={formik}>
             <Form autoComplete="off" noValidate onSubmit={handleSubmit}>
               <Box sx={{ mt: "1.2rem" }}>
+                <InputContainer>
+                  <InputLabels>Display Name</InputLabels>
+                  <TextField
+                    sx={{ mb: "1rem" }}
+                    placeholder="Enter your name"
+                    variant="filled"
+                    type="text"
+                    name="displayName"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.displayName}
+                    error={touched.displayName && Boolean(errors.displayName)}
+                    helperText={touched.displayName && errors.displayName}
+                  />
+                </InputContainer>
                 <InputContainer>
                   <InputLabels>Email Address</InputLabels>
                   <TextField

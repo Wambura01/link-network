@@ -1,3 +1,4 @@
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -5,19 +6,30 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 
+import { db } from "./firebaseConfig";
+
 const provider = new GoogleAuthProvider();
 
 // authentication
 //register users
-export const registerWithEmailAndPassword = async (auth, email, password) => {
+export const registerWithEmailAndPassword = async (auth, values, role) => {
   try {
     const registeredUser = await createUserWithEmailAndPassword(
       auth,
-      email,
-      password
-    ).then((userCredential) => {
+      values.email,
+      values.password
+    ).then(async (userCredential) => {
       const user = userCredential.user;
       localStorage.setItem("user", JSON.stringify(user.providerData));
+
+      const userRef = collection(db, role);
+      await addDoc(userRef, {
+        displayName: values.displayName,
+        email: values.email,
+        role: role,
+        createdAt: serverTimestamp(),
+        lastLoginAt: serverTimestamp(),
+      });
 
       return user;
     });
@@ -51,7 +63,7 @@ export const logInWithEmailAndPassword = async (auth, email, password) => {
 };
 
 // sign in with google pop up
-export const loginWithPopup = (auth) => {
+export const loginWithPopup = (auth, role) => {
   let isRegistered = false;
   try {
     return signInWithPopup(auth, provider).then((response) => {

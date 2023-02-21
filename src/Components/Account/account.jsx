@@ -20,6 +20,7 @@ export default function AccountMenu() {
   const open = Boolean(anchorEl);
   const navigate = useNavigate();
   const [user, setUser] = useState([]);
+  const [role, setRole] = useState(null);
 
   console.log("USER", user);
 
@@ -34,7 +35,12 @@ export default function AccountMenu() {
   };
 
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem("user")));
+    setUser(
+      JSON.parse(localStorage.getItem("user"))
+        ? JSON.parse(localStorage.getItem("user"))
+        : localStorage.getItem("user")
+    );
+    setRole(localStorage.getItem("role"));
   }, []);
 
   const logout = () => {
@@ -42,7 +48,7 @@ export default function AccountMenu() {
       .then(() => {
         // After successful sign-out .
         localStorage.clear();
-        navigate("/login", { replace: true });
+        navigate("/choice", { replace: true });
       })
       .catch((error) => {
         // an error happened.
@@ -51,12 +57,18 @@ export default function AccountMenu() {
   };
   return (
     <React.Fragment>
-      <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          textAlign: "center",
+          marginRight: "2rem",
+        }}
+      >
         <Tooltip title="Account" arrow>
           <IconButton
             onClick={handleClick}
             size="small"
-            sx={{ ml: 2, mt: 1 }}
             textAlign="right"
             aria-controls={open ? "account-menu" : undefined}
             aria-haspopup="true"
@@ -73,9 +85,17 @@ export default function AccountMenu() {
                   color: "white",
                 }}
               >
-                {user?.user?.displayName
-                  ? getInitials(user?.user?.displayName)
-                  : getFirstLetter(user?.user?.email)}
+                {user?.user
+                  ? user?.user?.displayName
+                    ? getInitials(user?.user?.displayName)
+                    : getFirstLetter(user?.user?.email)
+                  : user?.[0]
+                  ? user?.[0]?.displayName
+                    ? getInitials(user?.[0]?.displayName)
+                    : getFirstLetter(user?.email)
+                  : user
+                  ? getInitials(user?.displayName)
+                  : getFirstLetter(user?.email)}
               </Typography>
             </Avatar>
           </IconButton>
@@ -127,7 +147,11 @@ export default function AccountMenu() {
               color: "white",
             }}
           >
-            {getInitials(user?.user?.displayName)}
+            {user?.user
+              ? getInitials(user?.user?.displayName)
+              : user?.[0]
+              ? getInitials(user?.[0]?.displayName)
+              : getFirstLetter(user?.email)}
           </Typography>
           <Box sx={{ marginLeft: "1rem" }}>
             <Typography
@@ -139,7 +163,11 @@ export default function AccountMenu() {
                 textAlign: "right",
               }}
             >
-              {user?.user?.displayName}
+              {user?.[0]
+                ? user?.[0]?.displayName
+                : user?.user
+                ? user?.user?.displayName
+                : user?.displayName}
             </Typography>
             <Typography
               sx={{
@@ -150,7 +178,23 @@ export default function AccountMenu() {
                 textAlign: "center",
               }}
             >
-              {user?.user?.email}
+              {user?.[0]
+                ? user?.[0]?.email
+                : user?.user
+                ? user?.user?.email
+                : user?.email}
+            </Typography>
+            <Typography
+              sx={{
+                color: "black",
+                fontFamily: "Rubik, sans-serif",
+                fontWeight: "400",
+                fontSize: "12px",
+                textAlign: "right",
+                fontStyle: "italic",
+              }}
+            >
+              {role}
             </Typography>
           </Box>
         </MenuItem>

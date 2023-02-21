@@ -109,7 +109,7 @@ function RegisterAdmin() {
             variant="outlined"
             endIcon={<GoogleIcon />}
           >
-            Signup with
+            Sign in with
           </Button>
         </RightContent>
       </Box>
