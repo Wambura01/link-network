@@ -1,8 +1,6 @@
 import React, { useState, forwardRef } from "react";
 import { useFormik, Form, FormikProvider } from "formik";
-import { httpsCallable } from "firebase/functions";
 import * as Yup from "yup";
-import { collection, doc, serverTimestamp, setDoc } from "firebase/firestore";
 
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -32,7 +30,7 @@ const InputFeedback = ({ error }) =>
 
 export default function Apply() {
   const [open, setOpen] = useState(false);
-  const [isApplied, setIsApplied] = useState(true);
+  const [isApplied, setIsApplied] = useState(false);
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
   // customizable alert

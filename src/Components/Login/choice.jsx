@@ -92,7 +92,12 @@ function Choice() {
                       marginRight: "5rem",
                     }}
                   >
-                    <Field type="radio" name="role" value="student" />
+                    <Field
+                      style={{ cursor: "pointer" }}
+                      type="radio"
+                      name="role"
+                      value="student"
+                    />
                     Student
                   </label>
                   <label
@@ -103,7 +108,12 @@ function Choice() {
                       marginRight: "5rem",
                     }}
                   >
-                    <Field type="radio" name="role" value="editor" />
+                    <Field
+                      style={{ cursor: "pointer" }}
+                      type="radio"
+                      name="role"
+                      value="editor"
+                    />
                     Editor
                   </label>
                   <label
@@ -113,7 +123,12 @@ function Choice() {
                       fontSize: "1.1rem",
                     }}
                   >
-                    <Field type="radio" name="role" value="admin" />
+                    <Field
+                      style={{ cursor: "pointer" }}
+                      type="radio"
+                      name="role"
+                      value="admin"
+                    />
                     Admin
                   </label>
                 </Box>

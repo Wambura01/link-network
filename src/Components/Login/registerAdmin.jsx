@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, forwardRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Box from "@mui/material/Box";
@@ -11,20 +11,14 @@ import GoogleIcon from "@mui/icons-material/Google";
 import logo from "../../Assets/logo.png";
 
 //styles
-import {
-  LeftDiv,
-  LoginPage,
-  LogoStyles,
-  RightDiv,
-  RightContent,
-  Heading,
-} from "./loginStyles";
+import { LoginPage, LogoStyles, RightContent, Heading } from "./loginStyles";
 import { loginWithPopup } from "../../Firebase/operations";
 import { auth } from "../../Firebase/firebaseConfig";
 
 function RegisterAdmin() {
   const [isRegistered, setIsRegistered] = useState(false); // logged in state
   const [open, setOpen] = useState(false); // open and close alert
+  const [role, setRole] = useState(false);
   let navigate = useNavigate();
 
   // customizable alert
@@ -42,7 +36,7 @@ function RegisterAdmin() {
   };
 
   const handlePopup = async (auth) => {
-    const response = await loginWithPopup(auth);
+    const response = await loginWithPopup(auth, role);
 
     if (response) {
       setIsRegistered(true);
@@ -52,6 +46,10 @@ function RegisterAdmin() {
       }, 1000);
     }
   };
+
+  useEffect(() => {
+    setRole(localStorage.getItem("role"));
+  }, []);
 
   return (
     <LoginPage>

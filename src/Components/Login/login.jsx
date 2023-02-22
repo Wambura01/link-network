@@ -63,11 +63,7 @@ function Login() {
     initialValues: { email: "", password: "" },
     validationSchema: LoginSchema,
     onSubmit: async (values) => {
-      const response = await logInWithEmailAndPassword(
-        auth,
-        values.email,
-        values.password
-      );
+      const response = await logInWithEmailAndPassword(auth, values, role);
       if (response) {
         console.log("user", response);
         localStorage.setItem("user", JSON.stringify(response));
