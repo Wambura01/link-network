@@ -8,7 +8,6 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
-import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import FormControl from "@mui/material/FormControl";
 import MenuItem from "@mui/material/MenuItem";
@@ -74,7 +73,7 @@ function RegisterEditor() {
 
   useEffect(() => {
     setRole(localStorage.getItem("role"));
-  });
+  }, []);
 
   // validating form inputs
   const RegisterSchema = Yup.object().shape({

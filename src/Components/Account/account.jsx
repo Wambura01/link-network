@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { getAuth, signOut } from "firebase/auth";
 
@@ -94,8 +94,10 @@ export default function AccountMenu() {
                     ? getInitials(user?.[0]?.displayName)
                     : getFirstLetter(user?.email)
                   : user
-                  ? getInitials(user?.displayName)
-                  : getFirstLetter(user?.email)}
+                  ? user?.displayName
+                    ? getInitials(user?.displayName)
+                    : getFirstLetter(user?.email)
+                  : ""}
               </Typography>
             </Avatar>
           </IconButton>

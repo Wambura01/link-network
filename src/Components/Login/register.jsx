@@ -49,7 +49,7 @@ function Register() {
 
   useEffect(() => {
     setRole(localStorage.getItem("role"));
-  });
+  }, []);
 
   // validating form inputs
   const RegisterSchema = Yup.object().shape({
