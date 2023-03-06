@@ -59,6 +59,7 @@ function Jobs() {
   useEffect(() => {
     setRole(localStorage.getItem("role"));
     setLsEditor(JSON.parse(localStorage.getItem("user")));
+
     // fetch jobs on render
     const getJobs = async () => {
       try {
@@ -67,7 +68,11 @@ function Jobs() {
         jobsSnapshot.forEach((job) => {
           fetchedJobs.push({ docId: job.id, ...job.data() });
         });
-        setJobs(fetchedJobs);
+        setJobs(
+          fetchedJobs.filter(
+            (job) => job.isClosed === false || job.isClosed === undefined
+          )
+        );
       } catch (err) {
         console.log("Error while fetching jobs: " + err);
       }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { getAuth, signOut } from "firebase/auth";
 
@@ -201,7 +201,22 @@ export default function AccountMenu() {
           </Box>
         </MenuItem>
         <Divider />
-        <MenuItem>
+        <MenuItem sx={{ display: "flex", flexDirection: "column" }}>
+          {(role && role === "admin") || role === "editor" ? (
+            <Link
+              style={{ width: "98%", marginBottom: "1rem" }}
+              to="/portal/jobs-list"
+            >
+              <Button
+                fullWidth
+                sx={{ border: "1px solid black", color: "black" }}
+              >
+                Portal
+              </Button>
+            </Link>
+          ) : (
+            ""
+          )}
           <Button fullWidth color="error" variant="contained" onClick={logout}>
             Logout
           </Button>
